@@ -1,0 +1,112 @@
+@import "compass";
+@import "susy";
+
+$total-columns: 6; 
+$column-width: 4em;
+$gutter-width: 1em;
+$grid-padding: $gutter-width;
+
+$mobile-land: 30em;
+$tablet: 48em;
+$desktop: 55em;
+
+body{
+	font-size:16px;
+	@include susy-grid-background;
+	@include container($total-columns, $mobile-land, $tablet, $desktop);
+	height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3498db), to(lighten(#3498db, 5%))) fixed;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+
+h1, h2{
+	font-family: 'Pacifico', 'cursive';
+	text-align:center;
+	font-weight: 300;
+}
+
+h1{
+	margin-top: 10px;
+	font-size: 2.8em;
+}
+h2 {
+	font-size:1.02em;
+	margin-top:-50px;
+	margin-left:35px;
+}
+i {
+	margin-right: 5px;
+}
+a {
+	color: white;
+}
+.reverse {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+}
+
+.contact {
+
+	width: 15em;
+	margin: auto;
+
+	ul{
+		@include no-bullets;
+		li {
+		line-height: 1.8em;
+		}
+	}
+}
+
+@include at-breakpoint($mobile-land) {
+	h1{
+		font-size: 4.5em;
+	}
+	h2 {
+		font-size:1.7em;
+		margin-top:-80px;
+		margin-left:55px;
+	}
+	.contact {
+		width: 15em;
+		font-size: 1.3em;
+	}
+}
+
+@include at-breakpoint($tablet) {
+	h1{
+		font-size: 5.3em;
+	}
+	h2 {
+		font-size:2em;
+		margin-top:-95px;
+		margin-left:95px;
+	}
+	.contact {
+		width: 16em;
+		font-size: 1.3em;
+	}
+	i {
+		margin-right: 10px;
+	}
+}
+
+@include at-breakpoint($desktop) {
+	body{
+		font-weight:100;
+	}
+	h1 {
+		margin-top: 40px;
+	}
+	a {
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}

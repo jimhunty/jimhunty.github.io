@@ -1,4 +1,1 @@
-jimhunty.github.io
-==================
-
-Pages Profile
+# James-Miller.co.uk - Holding Page
