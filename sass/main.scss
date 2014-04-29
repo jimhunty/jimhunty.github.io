@@ -12,12 +12,13 @@ $desktop: 55em;
 
 body{
 	font-size:16px;
-	@include susy-grid-background;
+	//@include susy-grid-background;
 	@include container($total-columns, $mobile-land, $tablet, $desktop);
 	height: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background: -webkit-gradient(linear, left top, left bottom, from(#3498db), to(lighten(#3498db, 5%))) fixed;
+    @include background-image(linear-gradient(top, #3498db, tint(#3498db, 20%)));
+    background-position: fixed;
     color: white;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
